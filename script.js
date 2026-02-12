@@ -9,3 +9,11 @@ alert('Hola ' + nombreUsuario + ', tienes ' + edadUsuario + ' años.');
 console.log('Nombre:', nombreUsuario);
 console.log('Edad:', edadUsuario);
 console.log('Tipo de edad:', typeof edadUsuario);
+
+
+
+let anioActual = 2026;
+let anioNacimiento = anioActual - Number(edadUsuario);
+
+let saludo2 = `Hola ${nombreUsuario}, tienes ${edadUsuario} años y naciste en el año ${anioNacimiento}.`;
+console.log(saludo2);
