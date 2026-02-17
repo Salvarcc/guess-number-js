@@ -14,6 +14,24 @@ console.log('Tipo:', typeof intento);
 
 if (intento === numeroSecreto) {
   alert('🎉 ¡Correcto! El número era ' + numeroSecreto);
+  console.log('Resultado: ¡GANÓ!');
+} else if (intento > numeroSecreto) {
+  alert('📈 Muy alto. Intenta un número más bajo.');
+  console.log('Resultado: muy alto');
 } else {
-  alert('❌ Incorrecto. El número era ' + numeroSecreto);
+  alert('📉 Muy bajo. Intenta un número más alto.');
+  console.log('Resultado: muy bajo');
+}
+
+if (intento !== numeroSecreto) {
+  let intento2 = prompt('Intenta de nuevo (1-100):');
+  intento2 = Number(intento2);
+
+  if (intento2 === numeroSecreto) {
+    alert('🎉 ¡Correcto en el segundo intento!');
+  } else if (intento2 > numeroSecreto) {
+    alert('📈 Muy alto. El número era ' + numeroSecreto);
+  } else {
+    alert('📉 Muy bajo. El número era ' + numeroSecreto);
+  }
 }
