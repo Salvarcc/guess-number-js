@@ -1,34 +1,19 @@
-// --- Entrada del usuario ---
-let nombreUsuario = prompt('¿Cómo te llamas?');
-let edadUsuario = prompt('¿Cuántos años tienes?');
+// === ADIVINA EL NÚMERO ===
+// El programa genera un número secreto entre 1 y 100
+// El jugador intenta adivinarlo
 
-// --- Salida al usuario ---
-alert('Hola ' + nombreUsuario + ', tienes ' + edadUsuario + ' años.');
+console.log('=== Adivina el Número ===');
 
-// --- Verifica en consola ---
-console.log('Nombre:', nombreUsuario);
-console.log('Edad:', edadUsuario);
-console.log('Tipo de edad:', typeof edadUsuario);
+const numeroSecreto = Math.floor(Math.random() * 100) + 1;
 
+let intento = prompt('Adivina el número (1-100):');
+intento = Number(intento);
 
+console.log('Intento del jugador:', intento);
+console.log('Tipo:', typeof intento);
 
-let anioActual = 2026;
-let anioNacimiento = anioActual - Number(edadUsuario);
-
-let saludo2 = `Hola ${nombreUsuario}, tienes ${edadUsuario} años y naciste en el año ${anioNacimiento}.`;
-console.log(saludo2);
-
-let ciudad = prompt("En que ciudad vives?");
-let saludo3 = `Hola ${nombreUsuario}, tienes ${edadUsuario} años y vives en ${ciudad}.`;
-console.log(saludo3);
-
-let anio100 = anioNacimiento + 100;
-let indicacion = `Cumpliras 100 años en el año ${anio100}.`;
-console.log(indicacion);
-
-if (edadUsuario >= 18) {
-    console.log("Eres mayor de edad.");
-}
-else {
-    console.log("Eres menor de edad.");
+if (intento === numeroSecreto) {
+  alert('🎉 ¡Correcto! El número era ' + numeroSecreto);
+} else {
+  alert('❌ Incorrecto. El número era ' + numeroSecreto);
 }
