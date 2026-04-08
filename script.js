@@ -22,6 +22,8 @@ if(dificultad == 1){
 
   const numeroSecreto = Math.floor(Math.random() * 10) + 1;
 
+  console.log('(DEBUG) Número secreto:', numeroSecreto);
+
   let i = 1;
   let intento = 0;
 
@@ -33,8 +35,8 @@ if(dificultad == 1){
     console.log(`Intento ${i}:`);
     if (isNaN(intento)) {
       console.log('⚠️ Eso no es un número. Por favor ingresa un número del 1 al 10.');
-    } else if (intento < 1 || intento > 100) {
-      console.log('⚠️ El número debe estar entre 1 y 100.');
+    } else if (intento < 1 || intento > 10) {
+      console.log('⚠️ El número debe estar entre 1 y 10.');
     } else if (intento === numeroSecreto) {
       console.log('🎉 ¡Correcto! El número era ' + numeroSecreto);
     } else if (intento > numeroSecreto) {
@@ -125,8 +127,8 @@ document.getElementById('reiniciar').addEventListener('click', () => {
       console.log(`Intento ${i}:`);
       if (isNaN(intento)) {
         console.log('⚠️ Eso no es un número. Por favor ingresa un número del 1 al 10.');
-      } else if (intento < 1 || intento > 100) {
-        console.log('⚠️ El número debe estar entre 1 y 100.');
+      } else if (intento < 1 || intento > 10) {
+        console.log('⚠️ El número debe estar entre 1 y 10.');
       } else if (intento === numeroSecreto) {
         console.log('🎉 ¡Correcto! El número era ' + numeroSecreto);
       } else if (intento > numeroSecreto) {
